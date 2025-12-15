@@ -73,7 +73,7 @@ public class VezdehodTest {
             }
         }
 
-        // ===== КЛИК 1: CSS подход =====
+        //КЛИК 1: CSS
         System.out.println("\nКЛИК 1 (CSS подход)");
         if (orderButton != null) {
             // Прокручиваем и кликаем через JavaScript (CSS подход)
@@ -84,7 +84,7 @@ public class VezdehodTest {
             Thread.sleep(2000);
         }
 
-        // ===== КЛИК 2: XPath подход =====
+        // КЛИК 2: XPath
         System.out.println("\nКЛИК 2 (XPath)");
 
         // Теперь ищем элемент в модальном окне для второго клика
@@ -123,4 +123,5 @@ public class VezdehodTest {
         driver.quit();
         System.out.println("Два клика выполнены: первый открыл модальное окно, второй взаимодействовал с ним.");
     }
+
 }
