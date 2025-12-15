@@ -1,12 +1,14 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.time.Duration;
 
 public class third {
     public static void main(String[] args) throws Exception {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/user/Desktop/chromedriver-win64/chromedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "C:/Users/user/Desktop/geckodriver/geckodriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //
 
         driver.get("https://www.avito.ru");
@@ -26,6 +28,7 @@ public class third {
         Thread.sleep(2000);
 
         // 4.закрываем браузер
+        Thread.sleep(1000);
         driver.quit();
         System.out.println("4. Готово!");
     }
